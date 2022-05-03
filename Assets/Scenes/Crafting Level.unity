@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 404772911}
   - component: {fileID: 404772910}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 613519895}
   - component: {fileID: 613519894}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,6 +833,7 @@ GameObject:
   - component: {fileID: 1056585837}
   - component: {fileID: 1056585839}
   - component: {fileID: 1056585838}
+  - component: {fileID: 1056585840}
   m_Layer: 5
   m_Name: Result_Slot_Template
   m_TagString: Untagged
@@ -898,6 +899,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056585836}
   m_CullTransparentMesh: 0
+--- !u!114 &1056585840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056585836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a43fbd3fc3254daac32d73db3bc86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 1056585838}
+  item: {fileID: 1525971158}
+  count: {fileID: 613519895}
+  hasClicked: 0
+  craftingController: {fileID: 0}
 --- !u!1 &1062672350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1041,7 @@ GameObject:
   - component: {fileID: 1224665989}
   - component: {fileID: 1224665988}
   - component: {fileID: 1224665987}
+  - component: {fileID: 1224665991}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1112,6 +1131,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1224665991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224665986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf9da654e18d3347b38a0cfcba6ffe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSlotsContainer: {fileID: 1625400440}
+  craftingSlotsContainer: {fileID: 1062672351}
+  resultSlotContainer: {fileID: 53380242}
+  craftButton: {fileID: 565194283}
+  slotTemplate: {fileID: 1597713676}
+  resultSlotTemplate: {fileID: 1056585840}
+  playerSlots: []
+  items: []
 --- !u!1 &1525971156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1163,7 @@ GameObject:
   - component: {fileID: 1525971159}
   - component: {fileID: 1525971158}
   m_Layer: 5
-  m_Name: Item
+  m_Name: Result_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1263,6 +1302,7 @@ GameObject:
   - component: {fileID: 1597713673}
   - component: {fileID: 1597713675}
   - component: {fileID: 1597713674}
+  - component: {fileID: 1597713676}
   m_Layer: 5
   m_Name: Slot_Template
   m_TagString: Untagged
@@ -1328,6 +1368,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597713672}
   m_CullTransparentMesh: 0
+--- !u!114 &1597713676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597713672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a43fbd3fc3254daac32d73db3bc86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  container: {fileID: 1597713674}
+  item: {fileID: 2045198021}
+  count: {fileID: 404772911}
+  hasClicked: 0
+  craftingController: {fileID: 0}
 --- !u!1 &1625400439
 GameObject:
   m_ObjectHideFlags: 0
