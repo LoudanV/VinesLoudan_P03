@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ItemCrafting : MonoBehaviour
 {
+    [SerializeField] AudioSource UI_Press;
+
     public RectTransform playerSlotsContainer;
     public RectTransform craftingSlotsContainer;
     public RectTransform resultSlotContainer;
@@ -316,7 +318,7 @@ public class ItemCrafting : MonoBehaviour
     void PerformCrafting()
     {
         string[] combinedItemRecipe = new string[craftSlots.Length];
-
+        UI_Press.Play();
         craftButton.colors = defaultButtonColors;
 
         for (int i = 0; i < craftSlots.Length; i++)
